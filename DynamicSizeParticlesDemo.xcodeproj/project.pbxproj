@@ -14,6 +14,9 @@
 		289A3DDA1CA7713100A1DAB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289A3DD81CA7713100A1DAB2 /* Main.storyboard */; };
 		289A3DDC1CA7713100A1DAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 289A3DDB1CA7713100A1DAB2 /* Assets.xcassets */; };
 		289A3DDF1CA7713100A1DAB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289A3DDD1CA7713100A1DAB2 /* LaunchScreen.storyboard */; };
+		289A3DE81CA7724400A1DAB2 /* SnowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 289A3DE61CA7724400A1DAB2 /* SnowParticle.sks */; };
+		289A3DEB1CA7730800A1DAB2 /* snowflakes.png in Resources */ = {isa = PBXBuildFile; fileRef = 289A3DEA1CA7730800A1DAB2 /* snowflakes.png */; };
+		289A3DED1CA7756800A1DAB2 /* ParticlesNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289A3DEC1CA7756800A1DAB2 /* ParticlesNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		289A3DDB1CA7713100A1DAB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		289A3DDE1CA7713100A1DAB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		289A3DE01CA7713100A1DAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		289A3DE61CA7724400A1DAB2 /* SnowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticle.sks; sourceTree = "<group>"; };
+		289A3DEA1CA7730800A1DAB2 /* snowflakes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflakes.png; sourceTree = "<group>"; };
+		289A3DEC1CA7756800A1DAB2 /* ParticlesNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticlesNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +65,34 @@
 			isa = PBXGroup;
 			children = (
 				289A3DD01CA7713000A1DAB2 /* AppDelegate.swift */,
-				289A3DD21CA7713100A1DAB2 /* GameScene.sks */,
-				289A3DD41CA7713100A1DAB2 /* GameScene.swift */,
 				289A3DD61CA7713100A1DAB2 /* GameViewController.swift */,
+				289A3DD41CA7713100A1DAB2 /* GameScene.swift */,
+				289A3DD21CA7713100A1DAB2 /* GameScene.sks */,
 				289A3DD81CA7713100A1DAB2 /* Main.storyboard */,
 				289A3DDB1CA7713100A1DAB2 /* Assets.xcassets */,
 				289A3DDD1CA7713100A1DAB2 /* LaunchScreen.storyboard */,
 				289A3DE01CA7713100A1DAB2 /* Info.plist */,
+				289A3DF01CA82BC800A1DAB2 /* Particles */,
 			);
 			path = DynamicSizeParticlesDemo;
+			sourceTree = "<group>";
+		};
+		289A3DF01CA82BC800A1DAB2 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				289A3DEC1CA7756800A1DAB2 /* ParticlesNode.swift */,
+				289A3DF11CA82BD800A1DAB2 /* Snow */,
+			);
+			name = Particles;
+			sourceTree = "<group>";
+		};
+		289A3DF11CA82BD800A1DAB2 /* Snow */ = {
+			isa = PBXGroup;
+			children = (
+				289A3DE61CA7724400A1DAB2 /* SnowParticle.sks */,
+				289A3DEA1CA7730800A1DAB2 /* snowflakes.png */,
+			);
+			name = Snow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +153,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289A3DEB1CA7730800A1DAB2 /* snowflakes.png in Resources */,
 				289A3DD31CA7713100A1DAB2 /* GameScene.sks in Resources */,
+				289A3DE81CA7724400A1DAB2 /* SnowParticle.sks in Resources */,
 				289A3DDF1CA7713100A1DAB2 /* LaunchScreen.storyboard in Resources */,
 				289A3DDC1CA7713100A1DAB2 /* Assets.xcassets in Resources */,
 				289A3DDA1CA7713100A1DAB2 /* Main.storyboard in Resources */,
@@ -142,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289A3DED1CA7756800A1DAB2 /* ParticlesNode.swift in Sources */,
 				289A3DD51CA7713100A1DAB2 /* GameScene.swift in Sources */,
 				289A3DD71CA7713100A1DAB2 /* GameViewController.swift in Sources */,
 				289A3DD11CA7713000A1DAB2 /* AppDelegate.swift in Sources */,
